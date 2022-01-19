@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: asset-management application
+    description: managing internal resource asset
+logging:
+  file:
+    name: logs/applicaton.log
+management:
+  server:
+    port: 9000
+    health:
+      binders:
+        enabled: true
+  endpoints:
+    web:
+      base-path: "/"
+      exposure:
+        include: health,info,metrics
